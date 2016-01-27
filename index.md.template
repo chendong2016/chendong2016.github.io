@@ -1,0 +1,12 @@
+---
+layout: archive
+title: "Latest Posts in *name*"
+excerpt: "myexcerpt"
+
+---
+
+<div class="tiles">
+{% for post in site.categories.name %}
+	{% include post-grid.html %}
+{% endfor %}
+</div><!-- /.tiles -->

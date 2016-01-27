@@ -1,0 +1,12 @@
+# Site navigation links
+
+- title: Home
+  url: /
+  excerpt: 
+  image: 
+
+- title: 生活
+  url: /life/
+
+- title: 乒乓
+  url: /pingpang/

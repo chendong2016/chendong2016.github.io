@@ -1,0 +1,44 @@
+# Site wide configuration
+
+title: "陈东的博客"
+description: "Collection of everythings I want to record down especially for tech"
+logo: logo.jpg # 120x120 px default image used for Twitter summary card
+teaser: /teaser/default.jpg # 400x250 px default teaser image used in image archive grid
+locale:
+url:
+
+default:
+    -
+        scope:
+            type: "article"
+        values:
+            ads: false
+            toc: false 
+
+
+# Jekyll configuration
+
+sass:
+    sass_dir: _sass
+    style: compressed
+permalink: /:categories/:title/
+markdown: kramdown
+highlighter: pygments
+gems:
+  - jekyll-sitemap
+
+
+# Site owner
+owner: 
+  name: chendong(陈东)
+  email: chendong2016@sina.cn
+  twitter: chendong
+  google:
+    ad-client: "ca-pub-5984522345984184"
+    ad-slot: "9439014959"
+  bio: 
+  avatar: logo.jpg # 160x160 px image for author byline
+disqus-shortname: chendong
+
+
+exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
