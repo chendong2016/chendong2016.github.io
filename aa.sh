@@ -1,4 +1,4 @@
-#! /usr/bin/expect
+#!/usr/bin/expect
 set un [lindex $argv 0]
 set pw [lindex $argv 1]
 spawn git push
