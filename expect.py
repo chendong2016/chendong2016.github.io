@@ -9,7 +9,7 @@ os.system('git commit -m update')
 
 #foo = pexpect.spawn('scp -P 29999 body.txt root@144.168.61.108:/root/')
 foo = pexpect.spawn('git push')
-foo.expect('Username.*:')
+foo.expect('.*Username.*:')
 foo.sendline('chendong2016')
 
 foo.expect('.*ssword:*')
