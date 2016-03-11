@@ -1,20 +1,24 @@
 #!/usr/bin/python
 import pexpect
 import os
+import sys
 
-os.chdir('/home/chendong/5/chendong2016.github.io')
-os.system('git pull')
-os.system('git add .')
-os.system('git commit -m update')
+def git_expect(repodir, u, p):
+    os.chdir(repodir)
+    os.system('git pull')
+    os.system('git add .')
+    os.system('git commit -m update')
 
-#foo = pexpect.spawn('scp -P 29999 body.txt root@144.168.61.108:/root/')
-foo = pexpect.spawn('git push')
-foo.expect('.*Username.*:')
-foo.sendline('chendong2016')
+    foo = pexpect.spawn('git push')
+    foo.expect('.*Username.*:')
+    foo.sendline(u)
 
-foo.expect('.*ssword:*')
-foo.sendline('chendong1979')
-print foo.read()
+    foo.expect('.*ssword:*')
+    foo.sendline(p)
+    print foo.read()
+
+def main(argv):
+    git_expect(argv[1], argv[2], argv[3])
 
 if __name__ == '__main__':
-    print os.argv[0]
+    main(sys.argv)
