@@ -15,3 +15,6 @@ foo.sendline('chendong2016')
 foo.expect('.*ssword:*')
 foo.sendline('chendong1979')
 print foo.read()
+
+if __name__ == '__main__':
+    print os.argv[0]
